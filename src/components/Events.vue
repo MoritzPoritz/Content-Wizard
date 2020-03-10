@@ -14,17 +14,20 @@ export default {
   name: 'events',
   components: {
   },
-  data: function (){
-      return {
-          events: ["Default"]
-      }
+  
+    data: function (){
+        return {
+            events: ["Default"]
+        }
   },
   methods: {
       refreshEvents: () => {
 
       },
-      addEvent: () => {
-          axios.post('http://localhost:3000/').then(response => this.events.push(response));
+      sendEvent: () => {
+            //Send get request with event data to server
+            //axios.post('http://localhost:3000/').then(response => this.events.push(response));
+            console.log("hi")
       }
   },
 }
